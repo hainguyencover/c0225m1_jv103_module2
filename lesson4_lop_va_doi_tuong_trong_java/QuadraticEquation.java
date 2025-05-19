@@ -1,6 +1,6 @@
 import java.util.Scanner;
 
-public class QuadraticEquationClass {
+public class QuadraticEquation {
     private double a, b, c;
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
@@ -11,7 +11,7 @@ public class QuadraticEquationClass {
             double b = sc.nextDouble();
             System.out.println("Enter the value of c:");
             double c = sc.nextDouble();
-            QuadraticEquationClass equation = new QuadraticEquationClass(a, b, c);
+            QuadraticEquation equation = new QuadraticEquation(a, b, c);
             System.out.println("Quadratic Equation: " + equation.display());
             double discriminant = equation.getDiscriminant();
             System.out.println("Discriminant: " + discriminant);
@@ -30,8 +30,8 @@ public class QuadraticEquationClass {
             }
         }
     }
-    public QuadraticEquationClass(){}
-    public QuadraticEquationClass(double a, double b, double c) {
+    public QuadraticEquation(){}
+    public QuadraticEquation(double a, double b, double c) {
         this.a = a;
         this.b = b;
         this.c = c;

@@ -1,6 +1,6 @@
 import java.util.Scanner;
 
-public class RectangularClass {
+public class Rectangular {
     private double width;
     private double height;
     public static void main(String[] args) {
@@ -9,15 +9,15 @@ public class RectangularClass {
         double width = sc.nextDouble();
         System.out.println("Enter the height of the rectangle:");
         double height = sc.nextDouble();
-        RectangularClass rectangle =new RectangularClass(width, height);
+        Rectangular rectangle =new Rectangular(width, height);
         System.out.println("Rectangle: " + rectangle.display());
         System.out.println("Area: " + rectangle.getArea());
         System.out.println("Perimeter: " + rectangle.getPerimeter());
         sc.close();
     }
-    public RectangularClass() {}
+    public Rectangular() {}
 
-    public RectangularClass(double width, double height) {
+    public Rectangular(double width, double height) {
         this.width = width;
         this.height = height;
     }

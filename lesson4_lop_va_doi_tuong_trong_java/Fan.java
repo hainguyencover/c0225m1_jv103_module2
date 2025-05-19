@@ -1,6 +1,4 @@
-import java.awt.*;
-
-public class FanClass {
+public class Fan {
     final int SLOW = 1;
     final int MEDIUM = 2;
     final int FAST = 3;
@@ -10,9 +8,9 @@ public class FanClass {
     private String color;
 
     public static void main(String[] args) {
-        FanClass fan1 = new FanClass(1, true, 5, "red");
-        FanClass fan2 = new FanClass(3, true, 10, "yellow");
-        FanClass fan3 = new FanClass(2, false, 5, "blue");
+        Fan fan1 = new Fan(1, true, 5, "red");
+        Fan fan2 = new Fan(3, true, 10, "yellow");
+        Fan fan3 = new Fan(2, false, 5, "blue");
 
         System.out.println(fan1.toString());
         System.out.println(fan2.toString());
@@ -20,10 +18,10 @@ public class FanClass {
 
     }
 
-    public FanClass() {
+    public Fan() {
     }
 
-    public FanClass(int speed, boolean on, double radius, String color) {
+    public Fan(int speed, boolean on, double radius, String color) {
         this.speed = speed;
         this.on = on;
         this.radius = radius;
