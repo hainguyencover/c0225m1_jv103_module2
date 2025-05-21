@@ -1,11 +1,11 @@
-public class AccessModifier {
+public class Circle {
     private double radius = 1.0;
 
-    public AccessModifier() {
+    public Circle() {
 
     }
 
-    public AccessModifier(double radius) {
+    public Circle(double radius) {
         this.radius = radius;
     }
 
@@ -19,8 +19,8 @@ public class AccessModifier {
     }
 
     public static void main(String[] args) {
-        AccessModifier circle = new AccessModifier();
-        AccessModifier circle1 = new AccessModifier(5);
+        Circle circle = new Circle();
+        Circle circle1 = new Circle(5);
         System.out.println("Radius: " + circle.getRadius());
         System.out.println("Area: " + circle.getArea());
         System.out.println("----------------------------------");

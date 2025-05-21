@@ -1,9 +1,10 @@
-public class StaticMethod {
+package p1;
+public class Student {
     private int rollNo;
     private String name;
     private static String college = "BBDIT";
 
-    StaticMethod(int r, String n) {
+    Student(int r, String n) {
         rollNo = r;
         name = n;
     }
@@ -14,11 +15,11 @@ public class StaticMethod {
         System.out.println(rollNo + " " + name + " " + college);
     }
     public static void main(String[] args) {
-        StaticMethod.change();
+        Student.change();
 
-        StaticMethod s1 = new StaticMethod(111, "Hoang");
-        StaticMethod s2 = new StaticMethod(222, "Nam");
-        StaticMethod s3 = new StaticMethod(333, "Hanh");
+        Student s1 = new Student(111, "Hoang");
+        Student s2 = new Student(222, "Nam");
+        Student s3 = new Student(333, "Hanh");
         s1.display();
         s2.display();
         s3.display();
