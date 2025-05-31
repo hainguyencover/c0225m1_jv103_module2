@@ -37,6 +37,7 @@ public class NextDayCalculator {
 
         return nextDay;
     }
+
     private int getDaysInMonth(int month, int year) {
         return switch (month) {
             case 1, 3, 5, 7, 8, 10, 12 -> 31;
@@ -45,6 +46,7 @@ public class NextDayCalculator {
             default -> throw new IllegalArgumentException("Invalid month");
         };
     }
+
     private boolean isLeapYear(int year) {
         return (year % 4 == 0 && year % 100 != 0) || (year % 400 == 0);
     }
