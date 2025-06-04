@@ -1,60 +1,44 @@
 package b11;
 
-import java.io.BufferedReader;
-import java.io.BufferedWriter;
-import java.io.FileReader;
-import java.io.FileWriter;
-import java.io.IOException;
 import java.util.LinkedList;
 import java.util.Queue;
 
 public class Demerging {
     public static void main(String[] args) {
-        String inputFile = "b11/input.txt"; // Giả sử file chứa dữ liệu
-        String outputFile = "b11/output.txt"; // File lưu kết quả
+        Person[] persons = {
+                new Person("Nguyen Van A", "Male", "1980-04-10"),
+                new Person("Tran Thi B", "Female", "1981-08-15"),
+                new Person("Le Van C", "Male", "1982-01-20"),
+                new Person("Pham Thi D", "Female", "1983-11-05"),
+                new Person("Hoang Van E", "Male", "1984-06-10")
+        };
 
-        Queue<Person> nuQueue = new LinkedList<>();
-        Queue<Person> namQueue = new LinkedList<>();
+        // Tạo 2 queue: một cho nữ, một cho nam
+        Queue<Person> queueFemale = new LinkedList<>();
+        Queue<Person> queueMale = new LinkedList<>();
 
-        try (BufferedReader br = new BufferedReader(new FileReader(inputFile))) {
-            String line;
-
-            // Đọc từng dòng trong file
-            while ((line = br.readLine()) != null) {
-                String[] parts = line.split(",");
-                if (parts.length != 3)
-                    continue; // Bỏ qua dòng lỗi
-
-                Person p = new Person(parts[0].trim(), parts[1].trim(), parts[2].trim());
-
-                if (p.gioiTinh.equalsIgnoreCase("Nu")) {
-                    nuQueue.add(p);
-                } else {
-                    namQueue.add(p);
-                }
+        // Phân loại nhân viên vào 2 queue theo giới tính
+        for (Person e : persons) {
+            if (e.gioiTinh.equalsIgnoreCase("Female")) {
+                queueFemale.offer(e);
+            } else {
+                queueMale.offer(e);
             }
-
-        } catch (IOException e) {
-            e.printStackTrace();
-            return;
         }
 
-        // Ghi kết quả ra file mới
-        try (BufferedWriter bw = new BufferedWriter(new FileWriter(outputFile))) {
-            while (!nuQueue.isEmpty()) {
-                bw.write(nuQueue.poll().toString());
-                bw.newLine();
-            }
+        // Bắt đầu ghi kết quả (ở đây mình sẽ in ra console, bạn có thể thay thành ghi file)
+        System.out.println("Danh sách nhân viên sau khi demerging:");
 
-            while (!namQueue.isEmpty()) {
-                bw.write(namQueue.poll().toString());
-                bw.newLine();
-            }
+        // In nhân viên nữ trước
+        while (!queueFemale.isEmpty()) {
+            Person e = queueFemale.poll();
+            System.out.println(e);
+        }
 
-            System.out.println("Xuat file thanh ccng: " + outputFile);
-
-        } catch (IOException e) {
-            e.printStackTrace();
+        // Rồi tới nhân viên nam
+        while (!queueMale.isEmpty()) {
+            Person e = queueMale.poll();
+            System.out.println(e);
         }
     }
 }
