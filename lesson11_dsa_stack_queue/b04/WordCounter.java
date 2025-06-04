@@ -1,4 +1,4 @@
-package b4;
+package b04;
 
 import java.util.Map;
 import java.util.Scanner;

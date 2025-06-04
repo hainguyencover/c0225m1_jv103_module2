@@ -1,4 +1,4 @@
-package b1;
+package b01;
 
 public class GenericStackClient {
     public static void stackOfIsStrings() {
@@ -16,7 +16,7 @@ public class GenericStackClient {
         System.out.println("\n1.3 Size of stack after popping operations: " + stack.size());
     }
 
-    public static void stackOfIsIntegers(){
+    public static void stackOfIsIntegers() {
         MyGenericStack<Integer> stack = new MyGenericStack<>();
         stack.push(5);
         stack.push(4);

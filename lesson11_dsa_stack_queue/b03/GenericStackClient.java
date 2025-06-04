@@ -1,4 +1,4 @@
-package b3;
+package b03;
 
 public class GenericStackClient {
     public static void stackOfIsStrings() {

@@ -1,4 +1,4 @@
-package b6;
+package b06;
 
 public class MyQueue {
     private int capacity;

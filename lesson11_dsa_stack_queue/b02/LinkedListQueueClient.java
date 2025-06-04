@@ -1,4 +1,4 @@
-package b2;
+package b02;
 
 public class LinkedListQueueClient {
     public static void main(String[] args) {

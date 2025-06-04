@@ -1,4 +1,4 @@
-package b2;
+package b02;
 
 public class MyLinkedListQueue {
     private Node head;

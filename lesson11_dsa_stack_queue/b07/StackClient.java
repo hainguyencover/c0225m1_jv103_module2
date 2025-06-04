@@ -1,4 +1,4 @@
-package b7;
+package b07;
 
 public class StackClient {
     public static void main(String[] args) throws Exception {

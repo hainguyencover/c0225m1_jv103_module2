@@ -1,4 +1,4 @@
-package b2;
+package b02;
 
 public class Node {
     public int key;

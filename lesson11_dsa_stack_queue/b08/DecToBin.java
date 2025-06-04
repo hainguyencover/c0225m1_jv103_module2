@@ -1,4 +1,4 @@
-package b8;
+package b08;
 
 import java.util.Scanner;
 import java.util.Stack;
